@@ -20,7 +20,7 @@ This code sample handles three scenarios:
 
 This code has been tested on a wide variety of hosts supporting PHP, including but not limited to the following:
 
-- "Shared" hosting providers including HostGator and Elevent2.
+- "Shared" hosting providers including HostGator and Eleven2.
 - Local Apache instance setup with ModSecurity using vagrant.
 - Azure, AWS, and Digital Ocean.
 
@@ -30,7 +30,7 @@ Last, a stock installation of ModSecurity is known to block the `content-type` o
 
 Many hosting providers expose ModSecurity configuration options.  While disabling completely is a possibility, we hope that to be an absolute last resort.  We found that even those that do not expose configuration, their support staff were very accommodating in making changes. 
 
-On a personal note, this actually happend with us. The very knowledgable support staff at HostGator understood our problem and very promptly whitelisted the `content-type` in about 5 minutes for their entire fleet.
+On a personal note, this actually happened with us. The very knowledgeable support staff at HostGator understood our problem and very promptly whitelisted the `content-type` in about 5 minutes for their entire fleet.
 
 ## Questions
 

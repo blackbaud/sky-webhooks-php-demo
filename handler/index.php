@@ -17,12 +17,12 @@ function getJsonData() {
 
 // Handle subscription handshake
 function handleOPTIONS() {
-  $domain = 'eventgrid.azure.net';
+  $allowed_origin = 'eventgrid.azure.net';
 
   // Validate the handshake header is set
   if (
     isset($_SERVER['HTTP_WEBHOOK_REQUEST_ORIGIN']) &&
-    $_SERVER['HTTP_WEBHOOK_REQUEST_ORIGIN'] == $domain
+    $_SERVER['HTTP_WEBHOOK_REQUEST_ORIGIN'] == $allowed_origin
   ) {
 
     // Valid the request contains our unique key
@@ -30,13 +30,11 @@ function handleOPTIONS() {
       isset($_GET['key']) &&
       $_GET['key'] == WEBHOOK_SECRET_KEY
     ) {
-      header('WebHook-Allowed-Origin: ' . $domain);
+      header('WebHook-Allowed-Origin: ' . $allowed_origin);
       header('WebHook-Allowed-Rate: 100');
       header('Allow: POST');
     }
   }
-
-  exit;
 }
 
 // Handle subscription event
@@ -86,6 +84,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
   case 'GET':
     handleGET();
+  break;
+
+  default:
+    http_response_code(405);
   break;
 }
 ?>
