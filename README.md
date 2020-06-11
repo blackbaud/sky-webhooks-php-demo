@@ -1,4 +1,4 @@
-# sky-webhooks-php-demo
+# SKY Webhooks Demo (PHP)
 
 PHP version of the [SKY Developer Webhooks Tutorial](https://developer.blackbaud.com/skyapi/apis/webhook/tutorial).
 
