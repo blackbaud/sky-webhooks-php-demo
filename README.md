@@ -14,7 +14,7 @@ This code sample handles three scenarios:
 - Host this repo on the webserver of your choice with PHP support.
 - Use your webserver host URL + `/handler/?key=[WEBHOOK_SECRET_KEY]` when you register your webhook subscription.
 - Trigger a webhook event.
-- Visit your webserver host URL + `/hander/` to see any events that were delivered.
+- Visit your webserver host URL + `/handler/` to see any events that were delivered.
 
 ## Debugging
 
